@@ -1,0 +1,22 @@
+site:
+  title: Implicated
+  url: https://docs.implicated.com
+  start_page: component::index.adoc
+content:
+  sources:
+    - url: ./../component
+      start_paths:
+        - docs
+      branches: 'master'
+ui:
+  bundle:
+    url: https://raw.githubusercontent.com/implicated/asciidoc-publish-template/ui/ui-bundle.zip?raw=true
+    snapshot: true
+  supplemental_files:
+    - path: ui.yml
+      contents: |
+        static_files:
+        - .nojekyll
+    - path: .nojekyll
+output:
+  clean: true
